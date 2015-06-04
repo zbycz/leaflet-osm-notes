@@ -55,16 +55,10 @@
         <script src='leaflet-osm-notes.js'></script>
         <script>
             var map = L.map('map').setView([38.9, -77.1], 11);
-            if (window.devicePixelRatio > 1) {
-                L.tileLayer('http://a.tiles.mapbox.com/v3/tmcw.map-6s7ux6dj/{z}/{x}/{y}.png', {
-                    detectRetina: true
+            L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                maxZoom: 20,
+                attribution: 'Fond de plan &copy; <a href="http://openstreetmap.fr/">OpenStreetMap France</a>'
                 }).addTo(map);
-            } else {
-                L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-    maxZoom: 20,
-    attribution: 'Fond de plan &copy; <a href="http://openstreetmap.fr/">OpenStreetMap France</a>'
-  }).addTo(map);
-            }
             var notesLayer = new leafletOsmNotes();
             notesLayer.addTo(map);
         </script>
