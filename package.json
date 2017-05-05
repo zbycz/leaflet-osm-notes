@@ -18,7 +18,7 @@
   "author": "Tom MacWright <tom@macwright.org>",
   "license": "BSD",
   "dependencies": {
-    "reqwest": "~0.7.2",
-    "moment": "~2.0.0"
+    "reqwest": "^0.7.2",
+    "moment": "^2.0.0"
   }
 }
